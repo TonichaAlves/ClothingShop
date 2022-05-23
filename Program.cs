@@ -69,8 +69,8 @@ namespace Testing
         //function for begining of store (a welcome function) 
         public static void Start()
         {
-            Console.WriteLine("\tWelcome to the clothes store\n Please create a login");
-            Console.WriteLine("\tEnter Name\n");
+            Console.WriteLine("\tWelcome to the clothes store\n\tPlease create a login\n");
+            Console.WriteLine("\tEnter Name");
             name = Console.ReadLine();
             Console.WriteLine("\tPlease create a 4 digit Password");
             password = Console.ReadLine();
@@ -88,7 +88,7 @@ namespace Testing
             string loginPass = "";
             Console.WriteLine("\t" + name + ", you have created an account \n \t Now please Login, using created Password");
             loginPass = Console.ReadLine();
-
+            //Checks if users pasword is correct
             while (loginPass != password)
             {
                 if (loginPass == password)
@@ -119,7 +119,7 @@ namespace Testing
             Console.WriteLine("\n\t\t To enter Jackets Press  1\n");
             Console.WriteLine("\t\t To enter Shirts Press 2\n");
             Console.WriteLine("\t\t To enter Pants Press 3\n");
-            Console.WriteLine("\t\t To add more funds to your ballance please press 4\n");
+            Console.WriteLine("\t\t To add more funds to your balance please press 4\n");
             Console.WriteLine("\t\t To go to cart press 5\n");
 
             CheckInput();
@@ -153,10 +153,11 @@ namespace Testing
 
         static void Jackets()
         {
+            //Jackets displayed to user
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\t***  Jackets  ***\n");
             Console.WriteLine("\t To buy a Jacket please type the corresponding number to add an item to your cart.\n");
-            Console.WriteLine("\t\t 1 \t$50 Black Leather Jacket\n");
+            Console.WriteLine("\t\t 1 \t$50 Black Leather Jacket > 1\n");
             Console.WriteLine("\t\t 2 \t$70 Rain Jacket > 2\n");
             Console.WriteLine("\t\t 3 \t$40 Wool Jacket > 3\n");
             Console.WriteLine("\t\t 4 \t$20 Bomber Jacket > 4\n");
@@ -172,7 +173,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + bljacket + " and added a Black Leather Jacket  to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Jackets();
 
@@ -186,7 +187,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + rain + " and added a Rain Jacket to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Jackets();
             }
@@ -200,7 +201,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + wool + " and added a Wool Jacket to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Jackets();
 
@@ -215,7 +216,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + bomber + " and added a Bomber Jacket to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Jackets();
 
@@ -230,7 +231,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + puffer + " and added a Puffer Jacket to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Jackets();
             }
@@ -252,6 +253,7 @@ namespace Testing
 
         static void Shirts()
         {
+            //Shirts displayed to user
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\t***  Shirts  ***\n");
             Console.WriteLine("\t To buy shirts please type the corresponding number to add an item to your cart.\n");
@@ -271,7 +273,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + white + " and added a White shirt to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Shirts();
 
@@ -285,7 +287,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + yellow + " and added a Yellow shirt to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Shirts();
             }
@@ -299,7 +301,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + blue + " and added a blue shirt to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Shirts();
 
@@ -314,7 +316,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + green + " and added a Green shirt to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Shirts();
 
@@ -329,7 +331,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + black + " and added a Black shirt to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Shirts();
             }
@@ -348,6 +350,7 @@ namespace Testing
 
         static void Pants()
         {
+            //Pants displayed to user
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\t***  Pants  ***\n");
             Console.WriteLine("\t To buy a pair of pants please type the corresponding number to add an item to your cart.\n");
@@ -368,7 +371,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + brown + " and added Brown Pants to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Pants();
 
@@ -382,7 +385,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + tan + " and added Tan Pants to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Pants();
             }
@@ -396,7 +399,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + blue + " and added Blue Pants to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Pants();
 
@@ -411,7 +414,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + grey + " and added Grey Pants to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Pants();
 
@@ -426,7 +429,7 @@ namespace Testing
 
                 Console.WriteLine("\t\t You have spent " + black + " and added Black Pants to your cart \n");
 
-                Console.WriteLine("\t\t Your balance is now\t" + balance + "\n");
+                Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
                 Pants();
             }
@@ -444,11 +447,7 @@ namespace Testing
 
         static void Deposit()
         {
-
-
-
-
-
+            //Allows user to view current balance and deposit funds
             Console.WriteLine("\t Your balance is " + "$" + balance);
             Console.WriteLine("\n\n");
 
@@ -478,11 +477,11 @@ namespace Testing
         }//end of deposit function
 
 
-
+        //End/Cart funtion 
         static void End()
         {
-            Console.WriteLine("Cart");
-            Console.WriteLine("Your leftover balance is $" + balance);
+            Console.WriteLine("\t*** Cart ***\n");
+            Console.WriteLine("\tYour leftover balance is $" + balance);
 
             Console.WriteLine("\tThank you for shopping with us!");
             Console.WriteLine("\t\tGo back to Menu > 1");
