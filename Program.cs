@@ -15,6 +15,8 @@ namespace Testing
         public static decimal balance = 200;
         public static string userOption = "";
         public static readonly string[] allowedInput = { "0", "1", "2", "3", "4", "5", "e", };
+        // list of all our products
+        public static List<string> products = new List<string>();
 
         public static void CheckInput()
         {
@@ -157,11 +159,11 @@ namespace Testing
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\t***  Jackets  ***\n");
             Console.WriteLine("\t To buy a Jacket please type the corresponding number to add an item to your cart.\n");
-            Console.WriteLine("\t\t 1 \t$50 Black Leather Jacket > 1\n");
-            Console.WriteLine("\t\t 2 \t$70 Rain Jacket > 2\n");
-            Console.WriteLine("\t\t 3 \t$40 Wool Jacket > 3\n");
-            Console.WriteLine("\t\t 4 \t$20 Bomber Jacket > 4\n");
-            Console.WriteLine("\t\t 5 \t$60 Puffer Jacket > 5\n");
+            Console.WriteLine("\t\t 1 \t$50 Black Leather Jacket\n");
+            Console.WriteLine("\t\t 2 \t$70 Rain Jacket\n");
+            Console.WriteLine("\t\t 3 \t$40 Wool Jacket\n");
+            Console.WriteLine("\t\t 4 \t$20 Bomber Jacket\n");
+            Console.WriteLine("\t\t 5 \t$60 Puffer Jacket\n");
             Console.WriteLine("\t\t***  To exit back to main menu please press > e  ***\n");
 
             CheckInput();
@@ -170,8 +172,10 @@ namespace Testing
             {
                 decimal bljacket = 50;
                 balance -= bljacket;
+                // add product to the list
+                products.Add("\tBlack Leather Jacket = $50\n");
 
-                Console.WriteLine("\t\t You have spent " + bljacket + " and added a Black Leather Jacket  to your cart \n");
+                Console.WriteLine("\t\t You have spent $" + bljacket + " and added a Black Leather Jacket  to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -184,8 +188,10 @@ namespace Testing
             {
                 decimal rain = 70;
                 balance -= rain;
+                // add product to the list
+                products.Add("\tRain Jacket = $70\n");
 
-                Console.WriteLine("\t\t You have spent " + rain + " and added a Rain Jacket to your cart \n");
+                Console.WriteLine("\t\t You have spent $" + rain + " and added a Rain Jacket to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -199,7 +205,10 @@ namespace Testing
                 decimal wool = 40;
                 balance -= wool;
 
-                Console.WriteLine("\t\t You have spent " + wool + " and added a Wool Jacket to your cart \n");
+                // add product to the list
+                products.Add("\tWool Jacket = $40\n");
+
+                Console.WriteLine("\t\t You have spent $" + wool + " and added a Wool Jacket to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -214,7 +223,10 @@ namespace Testing
                 decimal bomber = 20;
                 balance -= bomber;
 
-                Console.WriteLine("\t\t You have spent " + bomber + " and added a Bomber Jacket to your cart \n");
+                // add product to the list
+                products.Add("\tBomber Jacket = $20\n");
+
+                Console.WriteLine("\t\t You have spent $" + bomber + " and added a Bomber Jacket to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -229,7 +241,10 @@ namespace Testing
                 decimal puffer = 60;
                 balance -= puffer;
 
-                Console.WriteLine("\t\t You have spent " + puffer + " and added a Puffer Jacket to your cart \n");
+                // add product to the list
+                products.Add("\tPuffer Jacket = $60\n");
+
+                Console.WriteLine("\t\t You have spent $" + puffer + " and added a Puffer Jacket to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -257,11 +272,11 @@ namespace Testing
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\t***  Shirts  ***\n");
             Console.WriteLine("\t To buy shirts please type the corresponding number to add an item to your cart.\n");
-            Console.WriteLine("\t\t 1 \t$10 White shirt \n");
-            Console.WriteLine("\t\t 2 \t$10 Yellow shirt \n");
-            Console.WriteLine("\t\t 3 \t$20 Blue shirt \n");
-            Console.WriteLine("\t\t 4 \t$20 Green shirt \n");
-            Console.WriteLine("\t\t 5 \t$30 Black shirt \n");
+            Console.WriteLine("\t\t 1 \t$10 White shirt\n");
+            Console.WriteLine("\t\t 2 \t$10 Yellow shirt\n");
+            Console.WriteLine("\t\t 3 \t$20 Blue shirt\n");
+            Console.WriteLine("\t\t 4 \t$20 Green shirt\n");
+            Console.WriteLine("\t\t 5 \t$30 Black shirt\n");
             Console.WriteLine("\t\t***  To exit back to main menu please press > e  ***\n");
 
             CheckInput();
@@ -271,7 +286,10 @@ namespace Testing
                 decimal white = 10;
                 balance -= white;
 
-                Console.WriteLine("\t\t You have spent " + white + " and added a White shirt to your cart \n");
+                // add product to the list
+                products.Add("\tWhite Shirt = $10\n");
+
+                Console.WriteLine("\t\t You have spent $" + white + " and added a White Shirt to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -285,7 +303,10 @@ namespace Testing
                 decimal yellow = 10;
                 balance -= yellow;
 
-                Console.WriteLine("\t\t You have spent " + yellow + " and added a Yellow shirt to your cart \n");
+                // add product to the list
+                products.Add("\tYellow Shirt = $10\n");
+
+                Console.WriteLine("\t\t You have spent $" + yellow + " and added a Yellow Shirt to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -299,7 +320,10 @@ namespace Testing
                 decimal blue = 20;
                 balance -= blue;
 
-                Console.WriteLine("\t\t You have spent " + blue + " and added a blue shirt to your cart \n");
+                // add product to the list
+                products.Add("\tBlue Shirt = $20\n");
+
+                Console.WriteLine("\t\t You have spent $" + blue + " and added a blue Shirt to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -314,7 +338,10 @@ namespace Testing
                 decimal green = 20;
                 balance -= green;
 
-                Console.WriteLine("\t\t You have spent " + green + " and added a Green shirt to your cart \n");
+                // add product to the list
+                products.Add("\tGreen Shirt = $20\n");
+
+                Console.WriteLine("\t\t You have spent $" + green + " and added a Green Shirt to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -329,7 +356,10 @@ namespace Testing
                 decimal black = 30;
                 balance -= black;
 
-                Console.WriteLine("\t\t You have spent " + black + " and added a Black shirt to your cart \n");
+                // add product to the list
+                products.Add("\tBlack Shirt = $30\n");
+
+                Console.WriteLine("\t\t You have spent $" + black + " and added a Black Shirt to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -354,10 +384,10 @@ namespace Testing
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\t***  Pants  ***\n");
             Console.WriteLine("\t To buy a pair of pants please type the corresponding number to add an item to your cart.\n");
-            Console.WriteLine("\t\t 1 \t$20 Brown Pants \n");
-            Console.WriteLine("\t\t 2 \t$30 Tan Pants \n");
-            Console.WriteLine("\t\t 3 \t$20 Blue Pants \n");
-            Console.WriteLine("\t\t 4 \t$40 Grey Pants \n");
+            Console.WriteLine("\t\t 1 \t$20 Brown Pants\n");
+            Console.WriteLine("\t\t 2 \t$30 Tan Pants\n");
+            Console.WriteLine("\t\t 3 \t$20 Blue Pants\n");
+            Console.WriteLine("\t\t 4 \t$40 Grey Pants\n");
             Console.WriteLine("\t\t 5 \t$50 Black Pants\n");
             Console.WriteLine("\t\t***  To exit back to main menu please press > e  ***\n");
 
@@ -369,7 +399,10 @@ namespace Testing
                 decimal brown = 20;
                 balance -= brown;
 
-                Console.WriteLine("\t\t You have spent " + brown + " and added Brown Pants to your cart \n");
+                // add product to the list
+                products.Add("\tBrown Pants = $20\n");
+
+                Console.WriteLine("\t\t You have spent $" + brown + " and added Brown Pants to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -383,7 +416,10 @@ namespace Testing
                 decimal tan = 30;
                 balance -= tan;
 
-                Console.WriteLine("\t\t You have spent " + tan + " and added Tan Pants to your cart \n");
+                // add product to the list
+                products.Add("\tTan Pants = $30\n");
+
+                Console.WriteLine("\t\t You have spent $" + tan + " and added Tan Pants to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -397,7 +433,10 @@ namespace Testing
                 decimal blue = 20;
                 balance -= blue;
 
-                Console.WriteLine("\t\t You have spent " + blue + " and added Blue Pants to your cart \n");
+                // add product to the list
+                products.Add("\tBlue Pants = $20\n");
+
+                Console.WriteLine("\t\t You have spent $" + blue + " and added Blue Pants to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -412,7 +451,10 @@ namespace Testing
                 decimal grey = 40;
                 balance -= grey;
 
-                Console.WriteLine("\t\t You have spent " + grey + " and added Grey Pants to your cart \n");
+                // add product to the list
+                products.Add("\tGrey Pants = $40\n");
+
+                Console.WriteLine("\t\t You have spent $" + grey + " and added Grey Pants to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -427,7 +469,10 @@ namespace Testing
                 decimal black = 50;
                 balance -= black;
 
-                Console.WriteLine("\t\t You have spent " + black + " and added Black Pants to your cart \n");
+                // add product to the list
+                products.Add("\tBlack Pants = $50\n");
+
+                Console.WriteLine("\t\t You have spent $" + black + " and added Black Pants to your cart \n");
 
                 Console.WriteLine("\t\t Your balance is now\t" + "$" + balance + "\n");
 
@@ -481,9 +526,20 @@ namespace Testing
         static void End()
         {
             Console.WriteLine("\t*** Cart ***\n");
+           
+            // display products <list> using foreach loop
+            if (products != null)
+            {
+                Console.WriteLine("\tYou have purchased:\n\n");
+                foreach (string item in products)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
             Console.WriteLine("\tYour leftover balance is $" + balance);
 
-            Console.WriteLine("\tThank you for shopping with us!");
+            Console.WriteLine("\n\tThank you for shopping with us!");
             Console.WriteLine("\t\tGo back to Menu > 1");
             Console.WriteLine("\t\tTop up Balance > 2");
             Console.WriteLine("\t\tExit Program > 3");
