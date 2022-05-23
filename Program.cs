@@ -8,6 +8,7 @@ namespace Testing
 {
     internal class Program
     {
+        //testing the commit
         public static string name = "";
         public static string password = "";
         public static string[] passwordOptions = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
