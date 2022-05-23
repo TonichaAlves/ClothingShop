@@ -8,7 +8,7 @@ namespace Testing
 {
     internal class Program
     {
-        //testing the commit
+       
         public static string name = "";
         public static string password = "";
         public static string[] passwordOptions = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
@@ -44,7 +44,7 @@ namespace Testing
 
 
 
-
+                //output displayed depending on users answers
                 if (check)
                 {
                     Console.WriteLine("\n \t Your input " + userInput + " is valid \n");
@@ -115,7 +115,7 @@ namespace Testing
             Console.WriteLine("\n \t *************************************************\n");
             Console.WriteLine("\n\t Welcome to the Main Menu\n");
             Console.WriteLine("\n\t Your current balance is $" + balance);
-
+            //Menu options displayed to user
             Console.WriteLine("\n\t\t To enter Jackets Press  1\n");
             Console.WriteLine("\t\t To enter Shirts Press 2\n");
             Console.WriteLine("\t\t To enter Pants Press 3\n");
@@ -123,7 +123,7 @@ namespace Testing
             Console.WriteLine("\t\t To go to cart press 5\n");
 
             CheckInput();
-
+            //Code that links functions to user Input
             if (userOption == "1")
             {
                 Jackets();
