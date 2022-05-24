@@ -8,7 +8,7 @@ namespace Testing
 {
     internal class Program
     {
-       
+       //declaring global string for use in a number of functions.
         public static string name = "";
         public static string password = "";
         public static string[] passwordOptions = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
@@ -17,6 +17,9 @@ namespace Testing
         public static readonly string[] allowedInput = { "0", "1", "2", "3", "4", "5", "e", };
         // list of all our products
         public static List<string> products = new List<string>();
+
+
+
 
         public static void CheckInput()
         {
@@ -68,6 +71,13 @@ namespace Testing
 
         }//end of CheckInput
 
+
+
+
+
+
+
+
         //function for begining of store (a welcome function) 
         public static void Start()
         {
@@ -78,7 +88,8 @@ namespace Testing
             password = Console.ReadLine();
 
             Login();
-        }
+
+        }//end of start function
 
 
 
@@ -105,13 +116,15 @@ namespace Testing
             }
             Console.WriteLine("\tAccepted\n");
             ClothingMenu();
-        }
+
+        }//end of Login function
+
+
 
 
 
 
         //make function for store entrance and main clothing menu
-
         static void ClothingMenu()
         {
             Console.WriteLine("\n \t *************************************************\n");
@@ -151,8 +164,13 @@ namespace Testing
                 End();
             }
 
-        }
+        }//end of clothing menu function
 
+
+
+
+
+        //function that will allow user to view and buy jackets
         static void Jackets()
         {
             //Jackets displayed to user
@@ -170,8 +188,11 @@ namespace Testing
 
             if (userOption == "1")
             {
+                //decimal will be minused from user's allowance if this item is purchased, this is the same for each item.
+
                 decimal bljacket = 50;
                 balance -= bljacket;
+
                 // add product to the list
                 products.Add("\tBlack Leather Jacket = $50\n");
 
@@ -188,6 +209,7 @@ namespace Testing
             {
                 decimal rain = 70;
                 balance -= rain;
+
                 // add product to the list
                 products.Add("\tRain Jacket = $70\n");
 
@@ -265,7 +287,7 @@ namespace Testing
 
 
 
-
+        //function that will allow user to view and buy shirts
         static void Shirts()
         {
             //Shirts displayed to user
@@ -278,7 +300,7 @@ namespace Testing
             Console.WriteLine("\t\t 4 \t$20 Green shirt\n");
             Console.WriteLine("\t\t 5 \t$30 Black shirt\n");
             Console.WriteLine("\t\t***  To exit back to main menu please press > e  ***\n");
-
+            //call this function to check user input
             CheckInput();
 
             if (userOption == "1")
@@ -378,6 +400,7 @@ namespace Testing
 
 
 
+        //function that will allow user to view and buy pants
         static void Pants()
         {
             //Pants displayed to user
@@ -490,20 +513,24 @@ namespace Testing
         }//end of pants function
 
 
+
+
+        //function that will allow user to add more funds to their allowance. There is no limit, we have free money.
         static void Deposit()
         {
             //Allows user to view current balance and deposit funds
             Console.WriteLine("\t Your balance is " + "$" + balance);
             Console.WriteLine("\n\n");
 
-
+            //ask user to enter their desired amount
             Console.WriteLine("\t You can Deposit more Funds, please enter an amount.");
 
-
+            //create a space for this input.
             decimal amount = 0;
 
             // amount = Convert.ToDecimal(Console.ReadLine());      //this is our bug 460
 
+            //convert decimal and add it to the ballance.
             if (decimal.TryParse(Console.ReadLine(), out amount))
             {
                 balance += amount;
@@ -522,7 +549,9 @@ namespace Testing
         }//end of deposit function
 
 
-        //End/Cart funtion 
+
+
+        //End of clothing store and Cart funtion. 
         static void End()
         {
             Console.WriteLine("\t*** Cart ***\n");
@@ -531,6 +560,7 @@ namespace Testing
             if (products != null)
             {
                 Console.WriteLine("\tYou have purchased:\n\n");
+
                 foreach (string item in products)
                 {
                     Console.WriteLine(item);
@@ -559,11 +589,11 @@ namespace Testing
             {
                 Environment.Exit(0);
             }
-        }
+        }//end of Cart/end function
 
 
 
-
+        //calling first function
         static void Main(string[] args)
         {
 
