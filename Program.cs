@@ -528,7 +528,7 @@ namespace Testing
             //create a space for this input.
             decimal amount = 0;
 
-            // amount = Convert.ToDecimal(Console.ReadLine());      //this is our bug 460
+           
 
             //convert decimal and add it to the ballance.
             if (decimal.TryParse(Console.ReadLine(), out amount))
