@@ -84,7 +84,7 @@ namespace Testing
             Console.WriteLine("\tWelcome to the clothes store\n\tPlease create a login\n");
             Console.WriteLine("\tEnter Name");
             name = Console.ReadLine();
-            Console.WriteLine("\tPlease create a 4 digit Password");
+            Console.WriteLine("\tPlease create Password");
             password = Console.ReadLine();
 
             Login();
